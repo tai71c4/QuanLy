@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLy
 {
-    public partial class Form1 : Form
+    public partial class dangnhap : Form
     {
-        public Form1()
+        public dangnhap()
         {
             InitializeComponent();
         }
