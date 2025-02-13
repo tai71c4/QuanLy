@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Doanmon
+namespace QuanLy
 {
-    public partial class QuanLiNhanVien : Form
+    public partial class QuanLyNhanVien : Form
     {
-        public QuanLiNhanVien()
+        public QuanLyNhanVien()
         {
             InitializeComponent();
         }
@@ -136,7 +136,7 @@ namespace Doanmon
 
 
 
-        private void QuanLiNhanVien_load(object sender, EventArgs e)
+        private void QuanLyNhanVien_load(object sender, EventArgs e)
         {
             this.BackColor = Color.WhiteSmoke;
 

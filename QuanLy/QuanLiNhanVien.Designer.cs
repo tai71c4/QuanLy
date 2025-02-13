@@ -1,6 +1,6 @@
-﻿namespace Doanmon
+﻿namespace QuanLy
 {
-    partial class QuanLiNhanVien
+    partial class QuanLyNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -235,7 +235,7 @@
             this.Controls.Add(this.btnTimkiem);
             this.Name = "QuanLiNhanVien";
             this.Text = "Họ Tên";
-            this.Load += new System.EventHandler(this.QuanLiNhanVien_load);
+            this.Load += new System.EventHandler(this.QuanLyNhanVien_load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
