@@ -13,6 +13,7 @@ namespace QuanLy
 {
     public partial class Quanlykhachhang : Form
     {
+        string connectionString = "Server=.;Database=QuanLyDoAnNhanh;Integrated Security=True";
         public Quanlykhachhang()
         {
             InitializeComponent();
@@ -39,7 +40,8 @@ namespace QuanLy
                     // Thêm khách hàng vào cơ sở dữ liệu (giả lập)
                     string query = "INSERT INTO KhachHang (HoTen, SDT, DiemTichLuy) VALUES (@HoTen, @SDT, @DiemTichLuy)";
 
-                    using (SqlConnection conn = new SqlConnection(QuanLyBanDoAnNhanhDataSet))
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+
                     {
                         try
                         {
@@ -111,7 +113,7 @@ namespace QuanLy
             string query = "SELECT IDKhachHang, HoTen, SDT, DiemTichLuy FROM KhachHang WHERE IDKhachHang = @IDKhachHang";
 
             // Kết nối đến CSDL
-            using (SqlConnection conn = new SqlConnection(QuanLyBanDoAnNhanhDataSet))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -146,7 +148,7 @@ namespace QuanLy
                                "WHERE HoTen LIKE @Keyword OR SDT LIKE @Keyword";
 
                 // Kết nối CSDL
-                using (SqlConnection conn = new SqlConnection(QuanLyBanDoAnNhanhDataSet))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))

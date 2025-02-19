@@ -13,6 +13,7 @@ namespace QuanLy
 {
     public partial class Quanlynhanvien : Form
     {
+        string connectionString = "Server=.;Database=QuanLyDoAnNhanh;Integrated Security=True";
         public Quanlynhanvien()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace QuanLy
                 string query = "INSERT INTO NhanVien (ID, HoTen, SoDienThoai, DiaChi, IDTaiKhoan) " +
                                "VALUES (@ID, @HoTen, @SoDienThoai, @DiaChi, @IDTaiKhoan)";
 
-                using (SqlConnection conn = new SqlConnection(QuanLyBanDoAnNhanhDataSet))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     try
                     {
@@ -95,7 +96,7 @@ namespace QuanLy
                     return;
                 }
 
-                using (SqlConnection conn = new SqlConnection(QuanLyBanDoAnNhanhDataSet))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     try
                     {
@@ -148,7 +149,7 @@ private void btnTimKiem_Click(object sender, EventArgs e)
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(QuanLyBanDoAnNhanhDataSet))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
