@@ -16,7 +16,11 @@ namespace QuanLy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             
+=======
+            Application.Run(new Quanlykhachhang());
+>>>>>>> 80c658eaa8a5eb90147405b38f0dc5341dedd5cc
         }
     }
 }
